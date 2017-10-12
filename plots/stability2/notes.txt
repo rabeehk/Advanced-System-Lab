@@ -1,0 +1,5 @@
+to reproduce the results, please run:
+
+python3 generate_time_series.py throughput ~/Desktop/bench-logs/stability-40
+python3 generate_time_series.py response-time ~/Desktop/bench-logs/stability-40
+
