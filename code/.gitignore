@@ -1,0 +1,14 @@
+*.class
+bin/
+reports/
+dist/
+*.pem
+AWS_DB_PW.txt
+aws_credentials.txt
+
+# Late stuff
+*.toc
+*.out
+*.log
+*.pyg
+*.aux

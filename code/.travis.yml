@@ -1,0 +1,19 @@
+language: java
+
+jdk:
+  - openjdk7
+  - oraclejdk7
+  - oraclejdk8
+
+addons:
+      postgresql: "9.3"
+
+before_script:
+    - psql -c 'create database asl_test;' -U postgres
+    - ant create-tables
+    - ant create-stored-procedures
+
+env:
+    - DATABASE_NAME=asl_test DATABASE_USER=postgres DATABASE_URL="jdbc:postgresql://localhost/asl_test?user=postgres"
+
+script: ant test
